@@ -1,410 +1,804 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Erymar Moreno | Belleza, esencia y transformación</title>
-  <meta name="description" content="Erymar Moreno. Un salón donde la belleza y la magia se encuentran. Extensiones de pestañas, uñas, imagen, bienestar y reconexión con tu esencia en Antequera." />
-  <meta name="theme-color" content="#c9ae72" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:title" content="Erymar Moreno" />
-  <meta property="og:description" content="Un salón donde la belleza y la magia se encuentran." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="img/logo.png" />
+<title>Erymar Moreno | Belleza, esencia y transformación</title>
+<meta name="description" content="Un salón donde la belleza y la magia se encuentran. Erymar Moreno en Antequera.">
 
-  <link rel="icon" type="image/png" href="img/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;600;700&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
 
-  <link rel="stylesheet" href="style.css" />
+:root{
+  --blush:#ead1cf;
+  --champagne:#d8c8b6;
+  --rose:#cba5a0;
+  --taupe:#b79b87;
+  --gold:#c9ae72;
+  --gold-dark:#a8894d;
+  --bg:#fbf8f5;
+  --white:#ffffff;
+  --text:#2f2723;
+  --muted:#6f625a;
+  --line:rgba(183,155,135,.28);
+  --shadow:0 18px 45px rgba(90,72,60,.10);
+  --shadow-soft:0 10px 24px rgba(90,72,60,.08);
+  --radius:26px;
+  --max:1180px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Montserrat",sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(234,209,207,.35), transparent 30%),
+    linear-gradient(180deg, #fffdfc, var(--bg));
+  color:var(--text);
+  line-height:1.7;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(var(--max), calc(100% - 40px));
+  margin:auto;
+}
+
+.section{
+  padding:90px 0;
+}
+
+.section-title{
+  margin-bottom:26px;
+}
+
+.section-title h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:56px;
+  line-height:1;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:var(--muted);
+  max-width:760px;
+}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(251,248,245,.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-wrap{
+  min-height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo img{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+  border-radius:16px;
+}
+
+.logo h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:34px;
+  line-height:1;
+}
+
+.logo span{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-top:4px;
+}
+
+.nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:600;
+  transition:.25s ease;
+}
+
+.nav a:hover{
+  background:rgba(201,174,114,.12);
+}
+
+.btn-nav{
+  background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+  color:#fff !important;
+}
+
+.hero{
+  padding:100px 0 80px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:34px;
+  align-items:center;
+}
+
+.hero h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:76px;
+  line-height:.94;
+  margin-bottom:20px;
+  max-width:10ch;
+}
+
+.hero p{
+  color:var(--muted);
+  font-size:18px;
+  max-width:56ch;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 20px;
+  border-radius:999px;
+  font-weight:600;
+  border:1px solid var(--line);
+  transition:.25s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.primary{
+  background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+  color:white;
+  border:none;
+}
+
+.secondary{
+  background:#fff;
+}
+
+.hero-image{
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+}
+
+.hero-image img{
+  width:100%;
+  height:560px;
+  object-fit:cover;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:36px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+}
+
+.card img{
+  height:220px;
+  width:100%;
+  object-fit:cover;
+}
+
+.card-body{
+  padding:22px;
+}
+
+.card h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:30px;
+  margin-bottom:8px;
+  line-height:1.05;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+.manifesto{
+  max-width:860px;
+  margin:auto;
+  display:grid;
+  gap:18px;
+  background:#fff;
+  padding:34px;
+  border-radius:28px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+
+.manifesto h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:56px;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.manifesto p{
+  color:var(--muted);
+  font-size:17px;
+}
+
+blockquote{
+  font-family:"Cormorant Garamond",serif;
+  font-size:34px;
+  border-left:4px solid var(--gold);
+  padding:10px 0 10px 18px;
+  color:#4e4038;
+}
+
+.philosophy-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:start;
+}
+
+.pillar{
+  background:white;
+  padding:22px;
+  border-radius:20px;
+  border:1px solid var(--line);
+  margin-bottom:15px;
+  box-shadow:var(--shadow-soft);
+}
+
+.pillar h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:32px;
+  margin-bottom:6px;
+}
+
+.pillar p{
+  color:var(--muted);
+}
+
+.triangle-box{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+.triangle-box img{
+  border-radius:20px;
+  width:100%;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:stretch;
+}
+
+.contact-card{
+  background:white;
+  padding:30px;
+  border-radius:24px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+
+.contact-card h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:54px;
+  line-height:1;
+  margin-bottom:12px;
+}
+
+.contact-card > p{
+  color:var(--muted);
+  margin-bottom:20px;
+}
+
+.contact-list{
+  display:grid;
+  gap:14px;
+}
+
+.contact-item{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  padding:16px 18px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:rgba(234,209,207,.16);
+}
+
+.contact-item i{
+  font-size:18px;
+  color:var(--gold-dark);
+  margin-top:4px;
+  min-width:18px;
+}
+
+.contact-item strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.contact-item a,
+.contact-item span{
+  color:var(--muted);
+  word-break:break-word;
+}
+
+.contact-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.map{
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+  min-height:100%;
+}
+
+.map iframe{
+  width:100%;
+  height:100%;
+  min-height:520px;
+  border:0;
+}
+
+.footer{
+  background:#f3ece6;
+  padding:34px 20px;
+  text-align:center;
+  border-top:1px solid var(--line);
+}
+
+.footer p{
+  color:var(--muted);
+}
+
+.footer strong{
+  color:var(--text);
+}
+
+.social-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:110;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.social-btn{
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+  font-size:20px;
+  box-shadow:0 12px 28px rgba(0,0,0,.18);
+  transition:.25s ease;
+}
+
+.social-btn:hover{
+  transform:translateY(-3px) scale(1.04);
+}
+
+.social-btn.whatsapp{
+  background:#25D366;
+}
+
+.social-btn.instagram{
+  background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+}
+
+.social-btn.email{
+  background:#c9ae72;
+}
+
+.social-btn.facebook{
+  background:#1877F2;
+}
+
+@media(max-width:900px){
+
+  .hero-grid,
+  .philosophy-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:50px;
+    max-width:none;
+  }
+
+  .section-title h2,
+  .manifesto h2,
+  .contact-card h2{
+    font-size:42px;
+  }
+
+  .hero-image img{
+    height:360px;
+  }
+
+  .map iframe{
+    min-height:380px;
+  }
+}
+
+@media(max-width:640px){
+
+  .nav-wrap{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:14px 0;
+  }
+
+  .hero{
+    padding:70px 0 56px;
+  }
+
+  .hero-actions,
+  .contact-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .social-float{
+    right:14px;
+    bottom:14px;
+  }
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#inicio" class="brand" aria-label="Ir al inicio">
-        <div class="brand-logo">
-          <img src="img/logo.png" alt="Logo Erymar Moreno">
-        </div>
-        <div class="brand-text">
-          <strong>Erymar Moreno</strong>
-          <span>Belleza · Esencia · Transformación</span>
-        </div>
-      </a>
+<header class="header">
+  <div class="container nav-wrap">
 
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#manifiesto">Manifiesto</a>
-        <a href="#filosofia">Filosofía</a>
-        <a href="#contacto">Contacto</a>
-        <a class="nav-cta" href="https://wa.me/34687873271?text=Hola%2C%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" target="_blank" rel="noopener">Reservar cita</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="inicio" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow">
-          <i></i>
-          Salón de belleza y bienestar en Antequera
-        </span>
-
-        <h1>Un salón donde la belleza y la magia se encuentran.</h1>
-
-        <p>
-          Un espacio creado para realzar tu imagen, reconectar con tu esencia y regalarte
-          un instante para verte, sentirte y habitarte de una manera diferente.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/34687873271?text=Hola%2C%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-            Reservar por WhatsApp
-          </a>
-          <a class="btn btn-secondary" href="#servicios">
-            Ver servicios
-          </a>
-        </div>
-
-        <div class="hero-points">
-          <article class="point">
-            <strong>Imagen y esencia</strong>
-            <span>Un servicio pensado para tu exterior y también para tu bienestar interior.</span>
-          </article>
-
-          <article class="point">
-            <strong>Atención personalizada</strong>
-            <span>Cada tratamiento se adapta a tu estilo, tu energía y tu momento.</span>
-          </article>
-
-          <article class="point">
-            <strong>Reserva rápida</strong>
-            <span>WhatsApp, Instagram, email y Facebook siempre visibles.</span>
-          </article>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="main-photo">
-          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1400&q=80" alt="Belleza y mirada" loading="lazy">
-        </div>
-
-        <div class="floating-card">
-          <span class="tag">Erymar Moreno</span>
-          <h3>Reconectar en belleza</h3>
-          <p>
-            En mi salón no solo transformamos cabellos o miradas, me gusta crear un espacio donde el ser pueda reconectar con su esencia.
-          </p>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <section class="section section-soft" id="servicios">
-    <div class="container">
-      <div class="section-head">
-        <span class="tag">Servicios</span>
-        <h2>Belleza para tu imagen y bienestar para tu esencia</h2>
-        <p>
-          Cada servicio está pensado para realzar tu presencia, elevar tu autoestima
-          y acompañarte en tu proceso de transformación personal.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80" alt="Extensiones de pestañas" loading="lazy">
-          <div class="service-body">
-            <h3>Extensiones de pestañas</h3>
-            <p>Realza tu mirada con un acabado elegante, femenino y personalizado.</p>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Diseño de mirada" loading="lazy">
-          <div class="service-body">
-            <h3>Diseño de mirada</h3>
-            <p>Trabajos pensados para favorecer tu rostro y potenciar tu expresión.</p>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Uñas" loading="lazy">
-          <div class="service-body">
-            <h3>Uñas</h3>
-            <p>Detalle, estilo y cuidado para completar una imagen armónica y sofisticada.</p>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80" alt="Cambio de look" loading="lazy">
-          <div class="service-body">
-            <h3>Cambio de look</h3>
-            <p>Renovar tu imagen también puede ser una forma de volver a encontrarte contigo misma.</p>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="https://images.unsplash.com/photo-1498843053639-170ff2122f35?auto=format&fit=crop&w=1200&q=80" alt="Cuidado personal" loading="lazy">
-          <div class="service-body">
-            <h3>Cuidado personal</h3>
-            <p>Más que estética: un instante para verte, sentirte y reconocerte.</p>
-          </div>
-        </article>
-
-        <article class="service-card service-featured">
-          <div class="service-body feature-body">
-            <span class="tag small">Experiencia</span>
-            <h3>Experiencia Erymar Moreno</h3>
-            <p>
-              No es solo un cambio de imagen. Es autoestima, presencia, emoción y transformación.
-            </p>
-            <a class="btn btn-primary full" href="https://wa.me/34687873271?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Erymar%20Moreno" target="_blank" rel="noopener">
-              Pedir información
-            </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="manifiesto">
-    <div class="container">
-      <div class="section-head center">
-        <span class="tag">El manifiesto</span>
-        <h2>La belleza nace cuando una mujer vuelve a encontrarse consigo misma</h2>
-      </div>
-
-      <div class="manifesto-card">
-        <p>
-          Creo que la belleza nace cuando una mujer vuelve a encontrarse consigo misma.
-          Creo en el poder de aprender a cuidar nuestro cuerpo, a escuchar nuestras emociones,
-          y aprender a movernos al ritmo de la vida.
-        </p>
-
-        <p>
-          Venir a mi salón es un servicio tanto para tu imagen como para alimentar el alma.
-          Cambiar tu look, colocarte extensiones de pestañas, hacerte las uñas, dedicarte un instante
-          para verte y sentirte diferente, también es parte de nuestro servicio.
-        </p>
-
-        <p>
-          Es gratificante para mí verlas sonreír después de mi trabajo, cuando se ven en el espejo
-          y dicen “qué bella me veo”, “me favorece este cambio”, “no me reconozco”.
-          Todas esas frases positivas hacia ellas mismas me confirman que sigo teniendo magia en mis manos.
-        </p>
-
-        <p>
-          Creo en el renacer, en el autodescubrimiento, y en el reinventarse en cualquier área de la vida
-          de una mujer y también de un hombre.
-        </p>
-
-        <blockquote>
-          “Emigrar y volver a levantarse también forma parte de la belleza”.
-        </blockquote>
-
-        <p class="manifesto-sign">
-          Erymar Moreno<br>
-          Reconectar en belleza
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-soft" id="filosofia">
-    <div class="container philosophy-grid">
-      <div class="philosophy-copy">
-        <span class="tag">Filosofía</span>
-        <h2>El arte de vivir nace del equilibrio</h2>
-
-        <p>
-          Tengo tres pilares fundamentales como ley de vida y de trabajo.
-          En el centro de todo está <strong>el arte de vivir</strong>, sostenido por tres dimensiones
-          que deben crecer con la misma fuerza.
-        </p>
-
-        <div class="pillar-list">
-          <article class="pillar">
-            <h3>Movimiento</h3>
-            <p>Expresión, libertad, seguridad y fluir con la vida.</p>
-          </article>
-
-          <article class="pillar">
-            <h3>La belleza física</h3>
-            <p>El cuidado de la imagen, la presencia y la manera en la que nos mostramos al mundo.</p>
-          </article>
-
-          <article class="pillar">
-            <h3>La belleza interna</h3>
-            <p>La autoestima, el bienestar emocional y la conexión con nuestro valor interior.</p>
-          </article>
-        </div>
-
-        <p class="philosophy-note">
-          Cuando estas dimensiones se equilibran aparece el movimiento:
-          la confianza, la libertad, la fe, la fuerza para admirarte en el espejo
-          y reconocerte como una mujer consciente de su valor.
-        </p>
-      </div>
-
-      <div class="triangle-card">
-        <div class="triangle-copy">
-          <h3>El triángulo de mi filosofía</h3>
-          <p>
-            Amo trabajar en las tres puntas del triángulo para que todas tengan la misma fuerza,
-            porque juntas generan el arte de aprender a vivir. Esa búsqueda constante del equilibrio me apasiona.
-          </p>
-        </div>
-
-        <img src="img/triangulo.png" alt="Triángulo filosofía Erymar Moreno">
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="esencia">
-    <div class="container">
-      <div class="section-head center">
-        <span class="tag">Esencia</span>
-        <h2>Más que un cambio de imagen</h2>
-        <p>
-          Una experiencia enfocada en presencia, autoestima, bienestar y transformación.
-        </p>
-      </div>
-
-      <div class="quote-grid">
-        <article class="quote-card">
-          <p>“Cada detalle del servicio está pensado para que te sientas cuidada, vista y especial.”</p>
-        </article>
-
-        <article class="quote-card">
-          <p>“La transformación exterior también puede convertirse en un nuevo comienzo interior.”</p>
-        </article>
-
-        <article class="quote-card">
-          <p>“Aquí la belleza no solo se aplica, también se despierta.”</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-contact" id="contacto">
-    <div class="container contact-grid">
-      <div class="contact-card">
-        <span class="tag">Contacto</span>
-        <h2>Reserva tu cita en pocos segundos</h2>
-        <p>
-          Ponte en contacto para pedir información, consultar disponibilidad o reservar tu próxima cita.
-        </p>
-
-        <div class="contact-list">
-          <div class="contact-item">
-            <i class="fab fa-whatsapp"></i>
-            <div>
-              <strong>WhatsApp</strong>
-              <a href="https://wa.me/34687873271?text=Hola%2C%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" target="_blank" rel="noopener">+34 687 87 32 71</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <strong>Correo electrónico</strong>
-              <a href="mailto:Lovelyroom.espacio@gmail.com">Lovelyroom.espacio@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fab fa-instagram"></i>
-            <div>
-              <strong>Instagram</strong>
-              <a href="https://www.instagram.com/erybrowlashes/" target="_blank" rel="noopener">@erybrowlashes</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fab fa-facebook-f"></i>
-            <div>
-              <strong>Facebook</strong>
-              <a href="https://www.facebook.com/people/Lovely-room/61564820423870/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener">Lovely Room</a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-location-dot"></i>
-            <div>
-              <strong>Dirección</strong>
-              <a href="https://www.google.com/maps/search/?api=1&query=Pl.+de+Fernandez+Viagas,+N%C2%BA18,+Local+5,+Antequera" target="_blank" rel="noopener">Pl. de Fernandez Viagas, Nº18, Local 5, Antequera</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://wa.me/34687873271?text=Hola%2C%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" target="_blank" rel="noopener">
-            <i class="fab fa-whatsapp"></i>
-            WhatsApp
-          </a>
-          <a class="btn btn-secondary" href="mailto:Lovelyroom.espacio@gmail.com">
-            <i class="fas fa-envelope"></i>
-            Email
-          </a>
-        </div>
-      </div>
-
-      <div class="map-card">
-        <div class="map-copy">
-          <h3>Ubicación</h3>
-          <p>Mapa integrado para facilitar la llegada al salón.</p>
-        </div>
-
-        <iframe
-          src="https://www.google.com/maps?q=Pl.%20de%20Fernandez%20Viagas%2C%20N%C2%BA18%2C%20Local%205%2C%20Antequera&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Mapa ubicación Erymar Moreno">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Erymar Moreno">
       <div>
         <h3>Erymar Moreno</h3>
-        <p>Un salón donde la belleza y la magia se encuentran</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="https://www.instagram.com/erybrowlashes/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/people/Lovely-room/61564820423870/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener">Facebook</a>
-        <a href="mailto:Lovelyroom.espacio@gmail.com">Email</a>
+        <span>Belleza · Esencia</span>
       </div>
     </div>
-  </footer>
 
-  <div class="social-float" aria-label="Accesos rápidos de contacto">
-    <a href="https://wa.me/34687873271?text=Hola%20quiero%20información%20sobre%20los%20servicios" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
+    <nav class="nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#manifiesto">Manifiesto</a>
+      <a href="#filosofia">Filosofía</a>
+      <a href="#contacto" class="btn-nav">Reservar</a>
+    </nav>
 
-    <a href="https://www.instagram.com/erybrowlashes/" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="mailto:Lovelyroom.espacio@gmail.com" class="social-btn email" aria-label="Correo electrónico">
-      <i class="fas fa-envelope"></i>
-    </a>
-
-    <a href="https://www.facebook.com/people/Lovely-room/61564820423870/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
   </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <h1>Un salón donde la belleza y la magia se encuentran</h1>
+
+      <p>
+        Un espacio creado para realzar tu imagen, reconectar con tu esencia y regalarte
+        un instante para verte y sentirte diferente.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" class="btn primary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          Reservar por WhatsApp
+        </a>
+
+        <a href="#contacto" class="btn secondary">
+          Contacto
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80" alt="Belleza y mirada">
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="servicios">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Servicios</h2>
+      <p>
+        Belleza para tu imagen y bienestar para tu esencia.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80" alt="Extensiones de pestañas">
+        <div class="card-body">
+          <h3>Extensiones de pestañas</h3>
+          <p>Realza tu mirada con un acabado elegante y femenino.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Diseño de mirada">
+        <div class="card-body">
+          <h3>Diseño de mirada</h3>
+          <p>Trabajos pensados para favorecer tu rostro.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Uñas">
+        <div class="card-body">
+          <h3>Uñas</h3>
+          <p>Detalle, estilo y cuidado para completar tu imagen.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="manifiesto">
+  <div class="container">
+    <div class="manifesto">
+
+      <h2>El manifiesto</h2>
+
+      <p>
+        Creo que la belleza nace cuando una mujer vuelve a encontrarse consigo misma.
+        Creo en el poder de aprender a cuidar nuestro cuerpo, escuchar nuestras emociones
+        y movernos al ritmo de la vida.
+      </p>
+
+      <p>
+        Venir a mi salón es un servicio tanto para tu imagen como para alimentar el alma.
+        Cambiar tu look, colocarte extensiones de pestañas o hacerte las uñas también
+        forma parte de ese momento para ti.
+      </p>
+
+      <p>
+        Es gratificante verlas sonreír cuando se miran al espejo y reconocen su belleza.
+        Eso me confirma que sigo teniendo magia en mis manos.
+      </p>
+
+      <blockquote>
+        “Emigrar y volver a levantarse también forma parte de la belleza”.
+      </blockquote>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="filosofia">
+  <div class="container philosophy-grid">
+
+    <div>
+      <div class="section-title">
+        <h2>Mi filosofía</h2>
+        <p>El equilibrio entre imagen, emoción y movimiento da forma al arte de vivir.</p>
+      </div>
+
+      <div class="pillar">
+        <h3>Movimiento</h3>
+        <p>Expresión, libertad y seguridad.</p>
+      </div>
+
+      <div class="pillar">
+        <h3>Belleza física</h3>
+        <p>El cuidado de la imagen y nuestra presencia.</p>
+      </div>
+
+      <div class="pillar">
+        <h3>Belleza interna</h3>
+        <p>La autoestima y el bienestar interior.</p>
+      </div>
+    </div>
+
+    <div class="triangle-box">
+      <img src="img/triangulo.png" alt="Triángulo de la filosofía Erymar Moreno">
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <div class="container contact-grid">
+
+    <div class="contact-card">
+
+      <h2>Reserva tu cita</h2>
+
+      <p>Ponte en contacto para pedir información o reservar.</p>
+
+      <div class="contact-list">
+
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" target="_blank" rel="noopener">+34 687 87 32 71</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:Lovelyroom.espacio@gmail.com">Lovelyroom.espacio@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fab fa-instagram"></i>
+          <div>
+            <strong>Instagram</strong>
+            <a href="https://www.instagram.com/erybrowlashes/" target="_blank" rel="noopener">@erybrowlashes</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fab fa-facebook-f"></i>
+          <div>
+            <strong>Facebook</strong>
+            <a href="https://www.facebook.com/people/Lovely-room/61564820423870/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener">Lovely Room</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-location-dot"></i>
+          <div>
+            <strong>Dirección</strong>
+            <span>Pl. de Fernandez Viagas, Nº18, Local 5, Antequera</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="contact-buttons">
+        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" class="btn primary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp
+        </a>
+
+        <a href="mailto:Lovelyroom.espacio@gmail.com" class="btn secondary">
+          <i class="fas fa-envelope"></i>
+          Email
+        </a>
+      </div>
+
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=Pl.+de+Fernandez+Viagas,+N%C2%BA18,+Local+5,+Antequera&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p><strong>Erymar Moreno</strong></p>
+  <p>Un salón donde la belleza y la magia se encuentran</p>
+</footer>
+
+<div class="social-float">
+
+  <a href="https://wa.me/34687873271?text=Hola%20quiero%20información%20sobre%20los%20servicios" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <a href="https://www.instagram.com/erybrowlashes/" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="mailto:Lovelyroom.espacio@gmail.com" class="social-btn email" aria-label="Correo electrónico">
+    <i class="fas fa-envelope"></i>
+  </a>
+
+  <a href="https://www.facebook.com/people/Lovely-room/61564820423870/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+</div>
 
 </body>
 </html>
