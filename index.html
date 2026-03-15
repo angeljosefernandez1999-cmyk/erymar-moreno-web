@@ -11,7 +11,7 @@
   <meta property="og:title" content="Erymar Moreno" />
   <meta property="og:description" content="Un salón donde la belleza y la magia se encuentran." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:image" content="logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,14 +32,12 @@
       --text:#2f2723;
       --muted:#6f625a;
       --line:rgba(183,155,135,.20);
-      --line-strong:rgba(183,155,135,.36);
       --shadow:0 18px 45px rgba(90,72,60,.10);
       --shadow-soft:0 10px 24px rgba(90,72,60,.08);
       --shadow-lift:0 24px 56px rgba(90,72,60,.14);
       --radius-xl:36px;
       --radius-lg:28px;
       --radius-md:20px;
-      --radius-sm:16px;
       --max:1200px;
     }
 
@@ -154,14 +152,15 @@
     }
 
     .logo img{
-      width:62px;
-      height:62px;
+      width:64px;
+      height:64px;
       object-fit:contain;
       border-radius:18px;
       background:#fff;
-      padding:4px;
+      padding:5px;
       border:1px solid var(--line);
       box-shadow:var(--shadow-soft);
+      flex-shrink:0;
     }
 
     .logo h3{
@@ -783,26 +782,13 @@
       transform:translateY(-3px) scale(1.04);
     }
 
-    .social-btn.whatsapp{
-      background:#25D366;
-    }
-
-    .social-btn.instagram{
-      background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
-    }
-
-    .social-btn.email{
-      background:#c9ae72;
-    }
-
-    .social-btn.facebook{
-      background:#1877F2;
-    }
+    .social-btn.whatsapp{ background:#25D366; }
+    .social-btn.instagram{ background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4); }
+    .social-btn.email{ background:#c9ae72; }
+    .social-btn.facebook{ background:#1877F2; }
 
     @media(max-width:1100px){
-      .hero h1{
-        font-size:70px;
-      }
+      .hero h1{ font-size:70px; }
     }
 
     @media(max-width:900px){
@@ -928,7 +914,7 @@
     "@context":"https://schema.org",
     "@type":"BeautySalon",
     "name":"Erymar Moreno",
-    "image":"img/logo.png",
+    "image":"logo.png",
     "telephone":"+34 687 87 32 71",
     "email":"Lovelyroom.espacio@gmail.com",
     "address":{
@@ -951,7 +937,7 @@
 <header class="header">
   <div class="container nav-wrap">
     <div class="logo">
-      <img src="img/logo.png" alt="Logo Erymar Moreno">
+      <img src="logo.png" alt="Logo Erymar Moreno">
       <div>
         <h3>Erymar Moreno</h3>
         <span>Belleza · Esencia</span>
@@ -1062,7 +1048,7 @@
       <span class="section-tag">Servicios</span>
       <h2>Mirada &amp; diseño de cejas</h2>
       <p>
-        Una carta más clara, más elegante y más enfocada a lo que realmente quieres mostrar: pestañas, visagismo, diseño de cejas y efectos personalizados para cada mirada.
+        Una carta más clara, más elegante y más enfocada a pestañas, visagismo, diseño de cejas y efectos personalizados para cada mirada.
       </p>
     </div>
 
@@ -1186,7 +1172,9 @@
     </div>
 
     <div class="triangle-box">
-      <img src="img/triangulo.png" alt="Triángulo filosofía Erymar Moreno">
+      <img src="logo.png" alt="Logo Erymar Moreno" style="max-width:140px;margin:0 auto 18px;">
+      <img src="logo.png" alt="" style="display:none;">
+      <img src="img/triangulo.png" alt="Triángulo filosofía Erymar Moreno" onerror="this.style.display='none'">
       <p>
         Este triángulo representa el equilibrio entre la belleza física, la belleza interna y el movimiento. Es el corazón de esta filosofía.
       </p>
