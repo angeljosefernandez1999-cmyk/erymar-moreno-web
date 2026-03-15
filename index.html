@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Erymar Moreno | Belleza, esencia y transformación</title>
-  <meta name="description" content="Un salón donde la belleza y la magia se encuentran. Belleza, mirada, uñas y bienestar en Antequera." />
+  <meta name="description" content="Un salón donde la belleza y la magia se encuentran. Mirada, diseño de cejas, pestañas y bienestar en Antequera, Málaga." />
   <meta name="theme-color" content="#c9ae72" />
+
+  <meta property="og:title" content="Erymar Moreno" />
+  <meta property="og:description" content="Un salón donde la belleza y la magia se encuentran." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="img/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +31,8 @@
       --white:#ffffff;
       --text:#2f2723;
       --muted:#6f625a;
-      --line:rgba(183,155,135,.22);
-      --line-strong:rgba(183,155,135,.38);
+      --line:rgba(183,155,135,.20);
+      --line-strong:rgba(183,155,135,.36);
       --shadow:0 18px 45px rgba(90,72,60,.10);
       --shadow-soft:0 10px 24px rgba(90,72,60,.08);
       --shadow-lift:0 24px 56px rgba(90,72,60,.14);
@@ -52,7 +57,7 @@
       font-family:"Montserrat",sans-serif;
       background:
         radial-gradient(circle at top left, rgba(234,209,207,.40), transparent 28%),
-        radial-gradient(circle at 90% 8%, rgba(201,174,114,.12), transparent 20%),
+        radial-gradient(circle at 90% 8%, rgba(201,174,114,.10), transparent 20%),
         linear-gradient(180deg, #fffdfc 0%, #fffaf8 28%, var(--bg) 100%);
       color:var(--text);
       line-height:1.75;
@@ -82,13 +87,13 @@
 
     .section.soft{
       background:
-        linear-gradient(180deg, rgba(234,209,207,.14), rgba(255,255,255,.86)),
+        linear-gradient(180deg, rgba(234,209,207,.12), rgba(255,255,255,.88)),
         var(--bg-2);
     }
 
     .section-head{
       margin-bottom:34px;
-      max-width:820px;
+      max-width:860px;
     }
 
     .section-head.center{
@@ -131,7 +136,7 @@
       z-index:100;
       background:rgba(251,248,245,.84);
       backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(183,155,135,.16);
+      border-bottom:1px solid rgba(183,155,135,.14);
     }
 
     .nav-wrap{
@@ -239,8 +244,8 @@
 
     .hero h1{
       font-family:"Cormorant Garamond",serif;
-      font-size:84px;
-      line-height:.88;
+      font-size:86px;
+      line-height:.86;
       margin-bottom:22px;
       max-width:10ch;
       letter-spacing:-.03em;
@@ -341,7 +346,7 @@
 
     .hero-image img{
       width:100%;
-      height:640px;
+      height:660px;
       object-fit:cover;
     }
 
@@ -354,7 +359,7 @@
       border-radius:20px;
       box-shadow:var(--shadow);
       padding:16px 18px;
-      max-width:280px;
+      max-width:320px;
       backdrop-filter:blur(12px);
     }
 
@@ -409,90 +414,101 @@
       font-size:15px;
     }
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:22px;
-      margin-top:38px;
-    }
-
-    .card{
-      background:white;
+    .service-focus{
+      background:#fff;
       border:1px solid var(--line);
       border-radius:var(--radius-lg);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      transition:.28s ease;
-    }
-
-    .card:hover{
-      transform:translateY(-6px);
       box-shadow:var(--shadow-lift);
-    }
-
-    .card img{
-      height:250px;
-      width:100%;
-      object-fit:cover;
-    }
-
-    .card-body{
-      padding:24px;
-    }
-
-    .card h3{
-      font-family:"Cormorant Garamond",serif;
-      font-size:32px;
-      margin-bottom:8px;
-      line-height:1.04;
-      letter-spacing:-.01em;
-    }
-
-    .card small{
-      display:block;
-      color:var(--gold-dark);
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      margin-bottom:10px;
-      font-size:11px;
-    }
-
-    .card p{
-      color:var(--muted);
-      font-size:15px;
-      margin-bottom:16px;
-    }
-
-    .card-buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
-    .gallery{
-      display:grid;
-      grid-template-columns:1.15fr .85fr .85fr;
-      gap:18px;
-    }
-
-    .gallery-item{
-      border-radius:28px;
       overflow:hidden;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow-soft);
-      min-height:240px;
     }
 
-    .gallery-item.tall{
-      grid-row:span 2;
-      min-height:500px;
+    .service-focus-top{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:0;
+      align-items:stretch;
     }
 
-    .gallery-item img{
+    .service-copy{
+      padding:38px;
+    }
+
+    .service-copy h3{
+      font-family:"Cormorant Garamond",serif;
+      font-size:48px;
+      line-height:.98;
+      margin-bottom:12px;
+    }
+
+    .service-copy p{
+      color:var(--muted);
+      margin-bottom:18px;
+    }
+
+    .service-image img{
       width:100%;
       height:100%;
+      min-height:340px;
       object-fit:cover;
+    }
+
+    .service-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      padding:0 38px 38px;
+    }
+
+    .service-item{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      padding:16px 18px;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(234,209,207,.18), rgba(255,255,255,.84));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .service-item i{
+      color:var(--gold-dark);
+      margin-top:3px;
+    }
+
+    .service-item span{
+      color:#433732;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .price-bar{
+      margin:0 38px 38px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      padding:18px 20px;
+      border-radius:20px;
+      background:linear-gradient(135deg, rgba(201,174,114,.18), rgba(234,209,207,.18));
+      border:1px solid var(--line);
+    }
+
+    .price-bar strong{
+      font-size:18px;
+      color:#433732;
+    }
+
+    .price-bar p{
+      color:var(--muted);
+      font-size:14px;
+      margin:0;
+    }
+
+    .service-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
     }
 
     .manifesto{
@@ -787,31 +803,19 @@
       .hero h1{
         font-size:70px;
       }
-
-      .cards{
-        grid-template-columns:repeat(2,1fr);
-      }
     }
 
     @media(max-width:900px){
       .hero-grid,
       .philosophy-grid,
-      .contact-grid{
+      .contact-grid,
+      .service-focus-top{
         grid-template-columns:1fr;
       }
 
-      .cards,
-      .benefits{
+      .benefits,
+      .service-list{
         grid-template-columns:1fr;
-      }
-
-      .gallery{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .gallery-item.tall{
-        grid-row:auto;
-        min-height:280px;
       }
 
       .hero{
@@ -837,6 +841,17 @@
         height:420px;
       }
 
+      .service-copy,
+      .service-list{
+        padding-left:24px;
+        padding-right:24px;
+      }
+
+      .price-bar{
+        margin-left:24px;
+        margin-right:24px;
+      }
+
       .map iframe{
         min-height:420px;
       }
@@ -860,7 +875,8 @@
       .hero-actions,
       .contact-buttons,
       .manifesto-actions,
-      .footer-buttons{
+      .footer-buttons,
+      .service-actions{
         flex-direction:column;
       }
 
@@ -885,10 +901,6 @@
         font-size:29px;
       }
 
-      .gallery{
-        grid-template-columns:1fr;
-      }
-
       .cta-band{
         padding:22px;
       }
@@ -910,6 +922,29 @@
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BeautySalon",
+    "name":"Erymar Moreno",
+    "image":"img/logo.png",
+    "telephone":"+34 687 87 32 71",
+    "email":"Lovelyroom.espacio@gmail.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Calle Merecilla 25",
+      "addressLocality":"Antequera",
+      "addressRegion":"Málaga",
+      "postalCode":"29200",
+      "addressCountry":"ES"
+    },
+    "sameAs":[
+      "https://www.instagram.com/erybrowlashes/",
+      "https://www.facebook.com/people/Lovely-room/61564820423870/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -929,7 +964,7 @@
       <a href="#manifiesto">Manifiesto</a>
       <a href="#filosofia">Filosofía</a>
       <a href="#contacto">Contacto</a>
-      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" class="btn-nav" target="_blank" rel="noopener">Reservar</a>
+      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn-nav" target="_blank" rel="noopener">Pide presupuesto</a>
     </nav>
   </div>
 </header>
@@ -947,9 +982,9 @@
       </p>
 
       <div class="hero-actions">
-        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" class="btn primary" target="_blank" rel="noopener">
+        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp"></i>
-          Reservar por WhatsApp
+          Pide presupuesto
         </a>
 
         <a href="mailto:Lovelyroom.espacio@gmail.com" class="btn secondary">
@@ -968,7 +1003,7 @@
           <i class="fab fa-instagram"></i>
           Instagram
         </a>
-        <a href="https://www.facebook.com/people/Lovely-room/61564820423870/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener" class="mini-btn">
+        <a href="https://www.facebook.com/people/Lovely-room/61564820423870/" target="_blank" rel="noopener" class="mini-btn">
           <i class="fab fa-facebook-f"></i>
           Facebook
         </a>
@@ -983,7 +1018,7 @@
       <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1400&q=80" alt="Belleza y mirada">
       <div class="hero-badge">
         <strong>Cita previa · Atención personalizada</strong>
-        <span>Belleza exterior, bienestar interior y una experiencia más cuidada.</span>
+        <span>Mirada, cejas y una experiencia más cuidada, delicada y profesional.</span>
       </div>
     </div>
   </div>
@@ -995,7 +1030,7 @@
       <span class="section-tag">Valor diferencial</span>
       <h2>Más que estética: una experiencia de cuidado y transformación</h2>
       <p>
-        La propuesta de Erymar Moreno no se queda solo en la imagen. Combina presencia, bienestar, atención cercana y una forma más consciente de sentirse bien.
+        La propuesta de Erymar Moreno combina belleza exterior, bienestar interior, atención cercana y servicios diseñados para realzar cada mirada de forma personalizada.
       </p>
     </div>
 
@@ -1003,19 +1038,19 @@
       <article class="benefit">
         <i class="fas fa-gem"></i>
         <h3>Atención personalizada</h3>
-        <p>Cada servicio se adapta a tu estilo, a tus facciones y al resultado que quieres conseguir.</p>
+        <p>Cada mirada se estudia para adaptar el diseño, el volumen y el efecto a cada rostro.</p>
       </article>
 
       <article class="benefit">
         <i class="fas fa-heart"></i>
-        <h3>Belleza con propósito</h3>
-        <p>No es solo cambiar tu imagen. Es dedicarte tiempo, mirarte distinto y reconectar contigo.</p>
+        <h3>Belleza con intención</h3>
+        <p>No se trata solo de verte mejor, sino de sentirte más segura, más cómoda y más tú.</p>
       </article>
 
       <article class="benefit">
         <i class="fas fa-sparkles"></i>
-        <h3>Ambiente cuidado</h3>
-        <p>Un espacio pensado para que te sientas cómoda, segura y bien atendida desde el primer momento.</p>
+        <h3>Resultados cómodos</h3>
+        <p>Técnicas pensadas para combinar estética, ligereza, duración y confort en el día a día.</p>
       </article>
     </div>
   </div>
@@ -1025,81 +1060,62 @@
   <div class="container">
     <div class="section-head">
       <span class="section-tag">Servicios</span>
-      <h2>Belleza para tu imagen y bienestar para tu esencia</h2>
+      <h2>Mirada &amp; diseño de cejas</h2>
       <p>
-        Servicios presentados de forma más visual, clara y moderna para que la clienta entienda rápido qué haces y pueda reservar sin esfuerzo.
+        Una carta más clara, más elegante y más enfocada a lo que realmente quieres mostrar: pestañas, visagismo, diseño de cejas y efectos personalizados para cada mirada.
       </p>
     </div>
 
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80" alt="Extensiones de pestañas">
-        <div class="card-body">
-          <small>Servicio destacado</small>
-          <h3>Extensiones de pestañas</h3>
-          <p>Realza tu mirada con un acabado elegante, femenino y pensado para favorecer tu expresión.</p>
-          <div class="card-buttons">
-            <a href="https://wa.me/34687873271?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20extensiones%20de%20pesta%C3%B1as" class="btn primary" target="_blank" rel="noopener">Reservar</a>
-            <a href="#contacto" class="btn secondary">Más info</a>
+    <div class="service-focus">
+      <div class="service-focus-top">
+        <div class="service-copy">
+          <span class="section-tag">Servicio principal</span>
+          <h3>Extensión de pestañas efecto seda</h3>
+          <p>
+            Es un pelo con hebra tecnológica, más fino, más ligero y con más duración y comodidad.
+          </p>
+
+          <div class="service-actions">
+            <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto%20para%20extensi%C3%B3n%20de%20pesta%C3%B1as%20efecto%20seda" class="btn primary" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              Pide presupuesto
+            </a>
+            <a href="#contacto" class="btn secondary">
+              <i class="fas fa-info-circle"></i>
+              Más información
+            </a>
           </div>
+        </div>
+
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1400&q=80" alt="Extensión de pestañas efecto seda">
         </div>
       </div>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Diseño de mirada">
-        <div class="card-body">
-          <small>Diseño personalizado</small>
-          <h3>Diseño de mirada</h3>
-          <p>Trabajos pensados para potenciar rasgos, armonía facial y una presencia más cuidada.</p>
-          <div class="card-buttons">
-            <a href="https://wa.me/34687873271?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20dise%C3%B1o%20de%20mirada" class="btn primary" target="_blank" rel="noopener">Reservar</a>
-            <a href="#contacto" class="btn secondary">Más info</a>
-          </div>
-        </div>
+      <div class="service-list">
+        <div class="service-item"><i class="fas fa-check"></i><span>Clásicas efecto seda</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Híbridas</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Mega volumen</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Diseños personalizados para cada mirada</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Efecto gato, almendrado, efecto pluma y efecto muñeca</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Retoque de pestañas</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Retirada de pestañas + hidratación</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Laminado de cejas + pigmento</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Diseño de cejas con visagismo</span></div>
+        <div class="service-item"><i class="fas fa-check"></i><span>Lifting de pestañas</span></div>
       </div>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Uñas">
-        <div class="card-body">
-          <small>Detalle y estilo</small>
-          <h3>Uñas</h3>
-          <p>Cuidado, detalle y estilo para completar una imagen bonita, armónica y bien trabajada.</p>
-          <div class="card-buttons">
-            <a href="https://wa.me/34687873271?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20u%C3%B1as" class="btn primary" target="_blank" rel="noopener">Reservar</a>
-            <a href="#contacto" class="btn secondary">Más info</a>
-          </div>
+      <div class="price-bar">
+        <div>
+          <strong>Pide presupuesto</strong>
+          <p>Te orientamos según el diseño, el volumen o el efecto que mejor encaje contigo.</p>
         </div>
+
+        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto%20para%20mirada%20y%20dise%C3%B1o%20de%20cejas" class="btn primary" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          Pedir presupuesto
+        </a>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section soft">
-  <div class="container">
-    <div class="section-head center">
-      <span class="section-tag">Galería</span>
-      <h2>Una imagen más visual, elegante y actual</h2>
-      <p>
-        Una galería ayuda a que la web se sienta más profesional y transmite mejor el estilo del salón.
-      </p>
-    </div>
-
-    <div class="gallery">
-      <article class="gallery-item tall">
-        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1400&q=80" alt="Detalle beauty">
-      </article>
-      <article class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80" alt="Mirada y belleza">
-      </article>
-      <article class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Tratamiento de mirada">
-      </article>
-      <article class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1498843053639-170ff2122f35?auto=format&fit=crop&w=1200&q=80" alt="Espacio de belleza">
-      </article>
-      <article class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80" alt="Cambio de look">
-      </article>
     </div>
   </div>
 </section>
@@ -1113,7 +1129,7 @@
     </p>
 
     <p>
-      Venir a mi salón es un servicio para tu imagen, pero también para el alma. Cambiar tu look, colocarte extensiones de pestañas, hacerte las uñas o regalarte un instante para verte distinta, también forma parte de nuestro servicio.
+      Venir a mi salón es un servicio para tu imagen, pero también para el alma. Realzar tu mirada, cuidar tus cejas o regalarte un instante para verte distinta, también forma parte de nuestro servicio.
     </p>
 
     <p>
@@ -1125,9 +1141,9 @@
     </blockquote>
 
     <div class="manifesto-actions">
-      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" class="btn primary" target="_blank" rel="noopener">
+      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
-        Reservar ahora
+        Pide presupuesto
       </a>
       <a href="mailto:Lovelyroom.espacio@gmail.com" class="btn secondary">
         <i class="fas fa-envelope"></i>
@@ -1182,14 +1198,14 @@
   <div class="container">
     <div class="cta-band">
       <div>
-        <h3>¿Lista para dedicarte ese momento?</h3>
+        <h3>¿Lista para cuidar tu mirada?</h3>
         <p>
-          Reserva tu cita, consulta disponibilidad o pide información directa por WhatsApp, email o redes sociales.
+          Escríbenos y te ayudamos a elegir el efecto, el diseño o el servicio que mejor encaje contigo.
         </p>
       </div>
-      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" class="btn primary" target="_blank" rel="noopener">
+      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i>
-        Reservar cita
+        Pedir presupuesto
       </a>
     </div>
   </div>
@@ -1202,7 +1218,7 @@
       <p>Pulsa sobre cualquier opción para contactar directamente.</p>
 
       <div class="contact-list">
-        <a class="contact-button" href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" target="_blank" rel="noopener">
+        <a class="contact-button" href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp"></i>
           <div>
             <strong>WhatsApp</strong>
@@ -1226,7 +1242,7 @@
           </div>
         </a>
 
-        <a class="contact-button" href="https://www.facebook.com/people/Lovely-room/61564820423870/?ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener">
+        <a class="contact-button" href="https://www.facebook.com/people/Lovely-room/61564820423870/" target="_blank" rel="noopener">
           <i class="fab fa-facebook-f"></i>
           <div>
             <strong>Facebook</strong>
@@ -1234,19 +1250,19 @@
           </div>
         </a>
 
-        <a class="contact-button" href="https://www.google.com/maps/search/?api=1&query=Pl.+de+Fernandez+Viagas,+N%C2%BA18,+Local+5,+Antequera" target="_blank" rel="noopener">
+        <a class="contact-button" href="https://www.google.com/maps/search/?api=1&query=Calle+Merecilla+25,+Antequera,+M%C3%A1laga,+29200" target="_blank" rel="noopener">
           <i class="fas fa-location-dot"></i>
           <div>
             <strong>Ubicación</strong>
-            <span>Pl. de Fernandez Viagas, Nº18, Local 5, Antequera</span>
+            <span>Calle Merecilla 25, Antequera, Málaga, 29200</span>
           </div>
         </a>
       </div>
 
       <div class="contact-buttons">
-        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" class="btn primary" target="_blank" rel="noopener">
+        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">
           <i class="fab fa-whatsapp"></i>
-          Reservar ahora
+          Pedir presupuesto
         </a>
         <a href="mailto:Lovelyroom.espacio@gmail.com" class="btn secondary">
           <i class="fas fa-envelope"></i>
@@ -1257,8 +1273,10 @@
 
     <div class="map">
       <iframe
-        src="https://www.google.com/maps?q=Pl.+de+Fernandez+Viagas,+N%C2%BA18,+Local+5,+Antequera&output=embed"
-        loading="lazy">
+        src="https://www.google.com/maps?q=Calle%20Merecilla%2025%2C%20Antequera%2C%20M%C3%A1laga%2C%2029200&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa Erymar Moreno">
       </iframe>
     </div>
   </div>
@@ -1269,14 +1287,14 @@
   <p>Un salón donde la belleza y la magia se encuentran</p>
 
   <div class="footer-buttons">
-    <a href="https://wa.me/34687873271?text=Hola,%20quiero%20reservar%20una%20cita%20con%20Erymar%20Moreno" class="btn primary" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">WhatsApp</a>
     <a href="https://www.instagram.com/erybrowlashes/" class="btn secondary" target="_blank" rel="noopener">Instagram</a>
     <a href="mailto:Lovelyroom.espacio@gmail.com" class="btn secondary">Email</a>
   </div>
 </footer>
 
 <div class="social-float">
-  <a href="https://wa.me/34687873271" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">
+  <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
