@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Erymar Moreno | Belleza, esencia y transformación</title>
-  <meta name="description" content="Un salón donde la belleza y la magia se encuentran. Mirada, diseño de cejas, pestañas y bienestar en Antequera, Málaga." />
+  <meta name="description" content="Un salón donde la belleza y la magia se encuentran. Mirada, diseño de cejas, pestañas, peluquería, maquillaje y experiencias beauty en Antequera, Málaga." />
   <meta name="theme-color" content="#c9ae72" />
 
   <meta property="og:title" content="Erymar Moreno" />
@@ -26,6 +26,7 @@
       --taupe:#b79b87;
       --gold:#c9ae72;
       --gold-dark:#a8894d;
+      --gold-soft:#e3d2aa;
       --bg:#fbf8f5;
       --bg-2:#fffaf7;
       --white:#ffffff;
@@ -38,6 +39,7 @@
       --radius-xl:36px;
       --radius-lg:28px;
       --radius-md:20px;
+      --radius-sm:16px;
       --max:1200px;
     }
 
@@ -91,7 +93,7 @@
 
     .section-head{
       margin-bottom:34px;
-      max-width:860px;
+      max-width:900px;
     }
 
     .section-head.center{
@@ -125,7 +127,7 @@
     .section-head p{
       color:var(--muted);
       font-size:16px;
-      max-width:760px;
+      max-width:780px;
     }
 
     .header{
@@ -199,10 +201,39 @@
       color:#3d322d;
     }
 
-    .btn-nav{
+    .hero-budget-btn{
+      position:relative;
+      overflow:hidden;
       background:linear-gradient(135deg,var(--gold),var(--gold-dark));
       color:#fff !important;
-      box-shadow:0 10px 24px rgba(168,137,77,.22);
+      box-shadow:
+        0 10px 24px rgba(168,137,77,.22),
+        0 0 0 0 rgba(201,174,114,.45);
+      animation:pulseBudget 2.2s infinite;
+    }
+
+    .hero-budget-btn::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-120%;
+      width:90%;
+      height:100%;
+      background:linear-gradient(90deg, transparent, rgba(255,255,255,.38), transparent);
+      transform:skewX(-20deg);
+      animation:shineBudget 2.8s infinite;
+    }
+
+    @keyframes shineBudget{
+      0%{ left:-120%; }
+      55%{ left:140%; }
+      100%{ left:140%; }
+    }
+
+    @keyframes pulseBudget{
+      0%{ box-shadow:0 10px 24px rgba(168,137,77,.22), 0 0 0 0 rgba(201,174,114,.42); }
+      70%{ box-shadow:0 10px 24px rgba(168,137,77,.22), 0 0 0 14px rgba(201,174,114,0); }
+      100%{ box-shadow:0 10px 24px rgba(168,137,77,.22), 0 0 0 0 rgba(201,174,114,0); }
     }
 
     .hero{
@@ -643,6 +674,137 @@
       max-width:640px;
     }
 
+    .quote-form-wrap{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:26px;
+      align-items:start;
+    }
+
+    .quote-intro,
+    .quote-form-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-lift);
+    }
+
+    .quote-intro{
+      padding:28px;
+    }
+
+    .quote-intro h3{
+      font-family:"Cormorant Garamond",serif;
+      font-size:42px;
+      line-height:1;
+      margin-bottom:18px;
+    }
+
+    .quote-service-groups{
+      display:grid;
+      gap:14px;
+    }
+
+    .quote-group{
+      padding:16px 18px;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(234,209,207,.16), rgba(255,255,255,.92));
+      border:1px solid var(--line);
+    }
+
+    .quote-group strong{
+      display:block;
+      margin-bottom:6px;
+      color:#433732;
+      font-size:15px;
+    }
+
+    .quote-group span{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .quote-form-card{
+      padding:30px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .form-field{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .form-field.full{
+      grid-column:1 / -1;
+    }
+
+    .form-field label{
+      font-size:14px;
+      font-weight:700;
+      color:#433732;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea{
+      width:100%;
+      padding:15px 16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font:inherit;
+      outline:none;
+      box-shadow:var(--shadow-soft);
+      transition:.2s ease;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus{
+      border-color:var(--gold-dark);
+      box-shadow:0 0 0 4px rgba(201,174,114,.12);
+    }
+
+    .form-field textarea{
+      resize:vertical;
+      min-height:130px;
+    }
+
+    .consent-field{
+      margin-top:4px;
+    }
+
+    .consent-box{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(234,209,207,.12);
+    }
+
+    .consent-box input{
+      width:18px;
+      height:18px;
+      margin-top:2px;
+      box-shadow:none;
+    }
+
+    .consent-box span{
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
     .contact-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -799,12 +961,14 @@
       .hero-grid,
       .philosophy-grid,
       .contact-grid,
-      .service-focus-top{
+      .service-focus-top,
+      .quote-form-wrap{
         grid-template-columns:1fr;
       }
 
       .benefits,
-      .service-list{
+      .service-list,
+      .form-grid{
         grid-template-columns:1fr;
       }
 
@@ -931,7 +1095,8 @@
     },
     "sameAs":[
       "https://www.instagram.com/erybrowlashes/",
-      "https://www.facebook.com/people/Lovely-room/61564820423870/"
+      "https://www.facebook.com/people/Lovely-room/61564820423870/",
+      "https://share.google/UHVEIzAxysc8J0JVa"
     ]
   }
   </script>
@@ -951,10 +1116,10 @@
     <nav class="nav">
       <a href="#servicios">Servicios</a>
       <a href="#valor">Por qué elegirnos</a>
-      <a href="#manifiesto">Manifiesto</a>
+      <a href="#presupuesto">Presupuesto</a>
       <a href="#filosofia">Filosofía</a>
       <a href="#contacto">Contacto</a>
-      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn-nav" target="_blank" rel="noopener">Pide presupuesto</a>
+      <a href="#presupuesto" class="hero-budget-btn">Pide presupuesto</a>
     </nav>
   </div>
 </header>
@@ -972,7 +1137,7 @@
       </p>
 
       <div class="hero-actions">
-        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">
+        <a href="#presupuesto" class="btn primary hero-budget-btn">
           <i class="fab fa-whatsapp"></i>
           Pide presupuesto
         </a>
@@ -982,9 +1147,9 @@
           Pedir información
         </a>
 
-        <a href="#contacto" class="btn dark-btn">
-          <i class="fas fa-calendar-check"></i>
-          Reserva tu cita
+        <a href="https://share.google/UHVEIzAxysc8J0JVa" class="btn secondary" target="_blank" rel="noopener">
+          <i class="fas fa-star"></i>
+          Ver reseñas
         </a>
       </div>
 
@@ -997,9 +1162,9 @@
           <i class="fab fa-facebook-f"></i>
           Facebook
         </a>
-        <a href="mailto:Lovelyroom.espacio@gmail.com" class="mini-btn">
-          <i class="fas fa-envelope"></i>
-          Email
+        <a href="https://maps.app.goo.gl/fq4trrErS66mpNi3A" target="_blank" rel="noopener" class="mini-btn">
+          <i class="fas fa-location-dot"></i>
+          Cómo llegar
         </a>
       </div>
     </div>
@@ -1008,7 +1173,7 @@
       <img src="hero.jpg" alt="Imagen principal Erymar Moreno">
       <div class="hero-badge">
         <strong>Cita previa · Atención personalizada</strong>
-        <span>Mirada, cejas y una experiencia más cuidada, delicada y profesional.</span>
+        <span>Mirada, cejas, peluquería, maquillaje y una experiencia beauty más cuidada.</span>
       </div>
     </div>
   </div>
@@ -1020,7 +1185,7 @@
       <span class="section-tag">Valor diferencial</span>
       <h2>Más que estética: una experiencia de cuidado y transformación</h2>
       <p>
-        La propuesta de Erymar Moreno combina belleza exterior, bienestar interior, atención cercana y servicios diseñados para realzar cada mirada de forma personalizada.
+        La propuesta de Erymar Moreno combina belleza exterior, bienestar interior, atención cercana y servicios diseñados para realzar cada detalle de forma personalizada.
       </p>
     </div>
 
@@ -1028,7 +1193,7 @@
       <article class="benefit">
         <i class="fas fa-gem"></i>
         <h3>Atención personalizada</h3>
-        <p>Cada mirada se estudia para adaptar el diseño, el volumen y el efecto a cada rostro.</p>
+        <p>Cada servicio se adapta a tu estilo, a tu necesidad y al resultado que realmente buscas.</p>
       </article>
 
       <article class="benefit">
@@ -1039,8 +1204,8 @@
 
       <article class="benefit">
         <i class="fas fa-sparkles"></i>
-        <h3>Resultados cómodos</h3>
-        <p>Técnicas pensadas para combinar estética, ligereza, duración y confort en el día a día.</p>
+        <h3>Experiencia premium</h3>
+        <p>Servicios enfocados en calidad, comodidad, detalle y una imagen mucho más cuidada.</p>
       </article>
     </div>
   </div>
@@ -1052,7 +1217,7 @@
       <span class="section-tag">Servicios</span>
       <h2>Mirada &amp; diseño de cejas</h2>
       <p>
-        Una carta más clara, más elegante y más enfocada a pestañas, visagismo, diseño de cejas y efectos personalizados para cada mirada.
+        Una carta más clara, más elegante y mejor organizada para mostrar tus servicios principales y facilitar que el cliente pida presupuesto de forma rápida.
       </p>
     </div>
 
@@ -1066,7 +1231,7 @@
           </p>
 
           <div class="service-actions">
-            <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto%20para%20extensi%C3%B3n%20de%20pesta%C3%B1as%20efecto%20seda" class="btn primary" target="_blank" rel="noopener">
+            <a href="#presupuesto" class="btn primary hero-budget-btn">
               <i class="fab fa-whatsapp"></i>
               Pide presupuesto
             </a>
@@ -1101,10 +1266,159 @@
           <p>Te orientamos según el diseño, el volumen o el efecto que mejor encaje contigo.</p>
         </div>
 
-        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto%20para%20mirada%20y%20dise%C3%B1o%20de%20cejas" class="btn primary" target="_blank" rel="noopener">
+        <a href="#presupuesto" class="btn primary hero-budget-btn">
           <i class="fab fa-whatsapp"></i>
           Pedir presupuesto
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="presupuesto">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-tag">Presupuesto</span>
+      <h2>Pide tu presupuesto personalizado</h2>
+      <p>
+        Completa el formulario y te redirigiremos a WhatsApp con tu solicitud lista para enviar, incluyendo servicio, urgencia y detalles adicionales.
+      </p>
+    </div>
+
+    <div class="quote-form-wrap">
+      <div class="quote-intro">
+        <h3>Servicios disponibles</h3>
+        <div class="quote-service-groups">
+          <div class="quote-group">
+            <strong>1. Mirada & Diseño de Cejas</strong>
+            <span>Extensión de pestañas efecto seda, clásicas efecto seda, híbridas, mega volumen, diseños personalizados, efecto gato, almendrado, pluma, muñeca, retoque, retirada + hidratación, laminado + pigmento, visagismo, lifting.</span>
+          </div>
+
+          <div class="quote-group">
+            <strong>2. Peluquería & Cambio de Look</strong>
+            <span>Corte personalizado, coloración, mechas, iluminaciones, hidratación profunda, keratina, alisado, botox, peinados.</span>
+          </div>
+
+          <div class="quote-group">
+            <strong>3. Ritual Capilar</strong>
+            <span>Diagnóstico capilar, masaje relajante, tratamiento nutritivo según diagnóstico e incluye peinado.</span>
+          </div>
+
+          <div class="quote-group">
+            <strong>4. Maquillaje Profesional</strong>
+            <span>Maquillaje social, de novia, para eventos y preparación facial spa antes del maquillaje.</span>
+          </div>
+
+          <div class="quote-group">
+            <strong>5. Experiencias & Servicios Beauty VIP</strong>
+            <span>Cumpleaños, aniversarios, eventos especiales y sesiones de amigas.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-form-card">
+        <form id="presupuestoForm">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="nombre">Nombre y apellidos *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+            </div>
+
+            <div class="form-field">
+              <label for="telefono">Teléfono / WhatsApp *</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej. 600123123" required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Correo electrónico (opcional)</label>
+              <input type="email" id="email" name="email" placeholder="tuemail@email.com">
+            </div>
+
+            <div class="form-field">
+              <label for="urgencia">Tipo de urgencia *</label>
+              <select id="urgencia" name="urgencia" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Sin urgencia">Sin urgencia</option>
+                <option value="Esta semana">Esta semana</option>
+                <option value="Lo antes posible">Lo antes posible</option>
+                <option value="Fecha concreta / evento">Fecha concreta / evento</option>
+              </select>
+            </div>
+
+            <div class="form-field full">
+              <label for="servicio">Servicio que te interesa *</label>
+              <select id="servicio" name="servicio" required>
+                <option value="">Selecciona un servicio</option>
+
+                <optgroup label="Mirada & Diseño de Cejas">
+                  <option>Extensión de pestañas efecto seda</option>
+                  <option>Clásicas efecto seda</option>
+                  <option>Híbridas</option>
+                  <option>Mega volumen</option>
+                  <option>Diseños personalizados para cada mirada</option>
+                  <option>Efecto gato / almendrado / pluma / muñeca</option>
+                  <option>Retoque de pestañas</option>
+                  <option>Retirada de pestañas + hidratación</option>
+                  <option>Laminado de cejas + pigmento</option>
+                  <option>Diseño de cejas con visagismo</option>
+                  <option>Lifting de pestañas</option>
+                </optgroup>
+
+                <optgroup label="Peluquería & Cambio de Look">
+                  <option>Corte de cabello personalizado</option>
+                  <option>Coloración</option>
+                  <option>Mechas</option>
+                  <option>Iluminaciones</option>
+                  <option>Hidratación profunda</option>
+                  <option>Keratina</option>
+                  <option>Alisado</option>
+                  <option>Botox</option>
+                  <option>Peinados</option>
+                </optgroup>
+
+                <optgroup label="Ritual Capilar">
+                  <option>Diagnóstico capilar</option>
+                  <option>Masaje relajante</option>
+                  <option>Tratamiento nutritivo de acuerdo al diagnóstico</option>
+                  <option>Ritual capilar completo con peinado</option>
+                </optgroup>
+
+                <optgroup label="Maquillaje Profesional">
+                  <option>Maquillaje social</option>
+                  <option>Maquillaje de novia</option>
+                  <option>Maquillaje para eventos</option>
+                  <option>Preparación facial spa antes del maquillaje</option>
+                </optgroup>
+
+                <optgroup label="Experiencias & Servicios Beauty VIP">
+                  <option>Cumpleaños</option>
+                  <option>Aniversarios</option>
+                  <option>Eventos especiales</option>
+                  <option>Sesiones de amigas</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-field full">
+              <label for="detalle">Cuéntanos tu idea o petición extra</label>
+              <textarea id="detalle" name="detalle" rows="6" placeholder="Describe lo que buscas, fecha aproximada, tipo de evento, estilo deseado o cualquier detalle importante..."></textarea>
+            </div>
+
+            <div class="form-field full consent-field">
+              <label class="consent-box">
+                <input type="checkbox" id="consentimiento" required>
+                <span>
+                  Acepto el uso de mis datos para que puedan responder a mi solicitud de presupuesto y contacto.
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn primary full-btn hero-budget-btn" style="margin-top:16px;">
+            <i class="fab fa-whatsapp"></i>
+            Enviar presupuesto por WhatsApp
+          </button>
+        </form>
       </div>
     </div>
   </div>
@@ -1119,7 +1433,7 @@
     </p>
 
     <p>
-      Venir a mi salón es un servicio para tu imagen, pero también para el alma. Realzar tu mirada, cuidar tus cejas o regalarte un instante para verte distinta, también forma parte de nuestro servicio.
+      Venir a mi salón es un servicio para tu imagen, pero también para el alma. Realzar tu mirada, cuidar tu cabello, maquillarte o regalarte un instante para verte distinta, también forma parte de nuestro servicio.
     </p>
 
     <p>
@@ -1131,13 +1445,13 @@
     </blockquote>
 
     <div class="manifesto-actions">
-      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">
+      <a href="#presupuesto" class="btn primary hero-budget-btn">
         <i class="fab fa-whatsapp"></i>
         Pide presupuesto
       </a>
-      <a href="mailto:Lovelyroom.espacio@gmail.com" class="btn secondary">
-        <i class="fas fa-envelope"></i>
-        Solicitar información
+      <a href="https://share.google/UHVEIzAxysc8J0JVa" class="btn secondary" target="_blank" rel="noopener">
+        <i class="fas fa-star"></i>
+        Ver reseñas
       </a>
     </div>
   </div>
@@ -1188,12 +1502,12 @@
   <div class="container">
     <div class="cta-band">
       <div>
-        <h3>¿Lista para cuidar tu mirada?</h3>
+        <h3>¿Lista para celebrar tu belleza?</h3>
         <p>
-          Escríbenos y te ayudamos a elegir el efecto, el diseño o el servicio que mejor encaje contigo.
+          Escríbenos y te ayudamos a elegir el efecto, el tratamiento o el servicio que mejor encaje contigo.
         </p>
       </div>
-      <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">
+      <a href="#presupuesto" class="btn primary hero-budget-btn">
         <i class="fab fa-whatsapp"></i>
         Pedir presupuesto
       </a>
@@ -1240,7 +1554,7 @@
           </div>
         </a>
 
-        <a class="contact-button" href="https://www.google.com/maps/search/?api=1&query=Calle+Merecilla+25,+Antequera,+M%C3%A1laga,+29200" target="_blank" rel="noopener">
+        <a class="contact-button" href="https://maps.app.goo.gl/fq4trrErS66mpNi3A" target="_blank" rel="noopener">
           <i class="fas fa-location-dot"></i>
           <div>
             <strong>Ubicación</strong>
@@ -1250,13 +1564,17 @@
       </div>
 
       <div class="contact-buttons">
-        <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">
+        <a href="#presupuesto" class="btn primary hero-budget-btn">
           <i class="fab fa-whatsapp"></i>
           Pedir presupuesto
         </a>
         <a href="mailto:Lovelyroom.espacio@gmail.com" class="btn secondary">
           <i class="fas fa-envelope"></i>
           Escribir email
+        </a>
+        <a href="https://share.google/UHVEIzAxysc8J0JVa" class="btn secondary" target="_blank" rel="noopener">
+          <i class="fas fa-star"></i>
+          Ver reseñas
         </a>
       </div>
     </div>
@@ -1277,14 +1595,15 @@
   <p>Un salón donde la belleza y la magia se encuentran</p>
 
   <div class="footer-buttons">
-    <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" class="btn primary" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="#presupuesto" class="btn primary hero-budget-btn">Pide presupuesto</a>
     <a href="https://www.instagram.com/erybrowlashes/" class="btn secondary" target="_blank" rel="noopener">Instagram</a>
     <a href="mailto:Lovelyroom.espacio@gmail.com" class="btn secondary">Email</a>
+    <a href="https://share.google/UHVEIzAxysc8J0JVa" class="btn secondary" target="_blank" rel="noopener">Reseñas</a>
   </div>
 </footer>
 
 <div class="social-float">
-  <a href="https://wa.me/34687873271?text=Hola,%20quiero%20pedir%20presupuesto" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">
+  <a href="#presupuesto" class="social-btn whatsapp" aria-label="Pide presupuesto">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -1300,6 +1619,47 @@
     <i class="fab fa-facebook-f"></i>
   </a>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("presupuestoForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const urgencia = document.getElementById("urgencia").value.trim();
+    const servicio = document.getElementById("servicio").value.trim();
+    const detalle = document.getElementById("detalle").value.trim();
+    const consentimiento = document.getElementById("consentimiento").checked;
+
+    if (!nombre || !telefono || !urgencia || !servicio || !consentimiento) {
+      alert("Por favor, completa los campos obligatorios y acepta el consentimiento.");
+      return;
+    }
+
+    const numeroWhatsApp = "34687873271";
+
+    const lineas = [
+      "Hola, quiero pedir presupuesto.",
+      "",
+      `Nombre: ${nombre}`,
+      `Teléfono: ${telefono}`,
+      `Email: ${email || "No facilitado"}`,
+      `Urgencia: ${urgencia}`,
+      `Servicio: ${servicio}`,
+      `Petición extra: ${detalle || "Sin detalles adicionales"}`,
+      `Consentimiento de datos: Sí`
+    ];
+
+    const mensaje = encodeURIComponent(lineas.join("\n"));
+    const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+    window.open(url, "_blank");
+  });
+});
+</script>
 
 </body>
 </html>
